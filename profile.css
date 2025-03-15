@@ -1,0 +1,189 @@
+/* Base Light Mode Styles */
+:root {
+    --background-color: white;
+    --text-color: black;
+    --input-bg: #f3f4f6;
+    --button-bg: black;
+    --button-text: white;
+    --border-color: #ddd;
+    --active-color: blue;
+    --icon-color: black; /* Icon color for light mode */
+}
+
+/* Dark Mode Styles */
+.darkmode {
+    --background-color: #070b1d;
+    --text-color: white;
+    --input-bg: #101425;
+    --button-bg: #0071ff;
+    --button-text: white;
+    --border-color: #555;
+    --active-color: #0071ff;
+    --icon-color: white; /* Icon color for dark mode */
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: var(--text-color);
+}
+
+/* Header */
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    background-color: var(--background-color);
+}
+
+/* Center profile text */
+.header h1 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+/* Back button */
+.header a {
+    position: absolute;
+    left: 28px; /* Move it slightly left */
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 20px;
+}
+
+/* Dark Mode Toggle */
+#theme-switch {
+    position: absolute;
+    right: 15px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: var(--input-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+#theme-switch svg {
+    fill: var(--text-color);
+    width: 30px;
+    height: 30px;
+}
+
+#theme-switch svg:last-child {
+    display: none;
+}
+
+.darkmode #theme-switch svg:first-child {
+    display: none;
+}
+
+.darkmode #theme-switch svg:last-child {
+    display: block;
+}
+
+/* Profile Content */
+.profile-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-image-container img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.camera-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 26px;
+    margin-top: 10px;
+}
+
+.username {
+    color: gray;
+    font-size: 16px;
+}
+
+.bio {
+    color: gray;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.edit-profile-btn {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 12px 24px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Footer Navigation */
+.footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: var(--background-color);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 8px;
+}
+
+.footer-item {
+    text-align: center;
+    color: var(--icon-color);
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-item i {
+    font-size: 22px;
+    margin-bottom: 3px;
+    color: var(--icon-color);
+}
+
+/* Active Page Highlight */
+.footer-item.active {
+    color: var(--active-color);
+}
+
+.footer-item.active i {
+    color: var(--active-color);
+}
