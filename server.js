@@ -16,7 +16,7 @@ app.post("/chat", async (req, res) => {
         return res.json({ reply: "Please enter a message." });
     }
 
-    // Modify query for better Wolfram Alpha results
+    // Properly formatted query for Wolfram Alpha
     const query = `what is ${userMessage}`;
 
     try {
@@ -31,4 +31,4 @@ app.post("/chat", async (req, res) => {
 });
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
