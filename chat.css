@@ -113,7 +113,7 @@ body {
     flex-direction: column;
     max-height: calc(100vh - 150px);
     height: 100%;
-    scroll-behavior: smooth; /* Smooth scrolling */
+    scroll-behavior: smooth; 
 }
 
 

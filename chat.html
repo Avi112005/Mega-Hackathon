@@ -84,8 +84,6 @@
                 botMessage.textContent = "Error: Unable to get a response.";
                 console.error("Chat error:", error);
             }
-    
-            // ✅ Ensure the chat scrolls properly after response is received
             setTimeout(scrollToBottom, 100);
         }
     
@@ -102,21 +100,18 @@
             messageDiv.textContent = text;
             chatContainer.appendChild(messageDiv);
     
-            // ✅ Ensure the chat scrolls after adding a new message
             setTimeout(scrollToBottom, 50);
     
             return messageDiv;
         }
     
-        // ✅ Function to always scroll to bottom
         function scrollToBottom() {
             const chatContainer = document.getElementById("chat-container");
             chatContainer.scrollTo({ top: chatContainer.scrollHeight, behavior: "smooth" });
         }
     
-        // ✅ Ensure chat scrolls when page loads
         window.onload = () => {
-            setTimeout(scrollToBottom, 200); // Delayed to allow content to fully load
+            setTimeout(scrollToBottom, 200); 
         };
     </script>
     
