@@ -3,10 +3,10 @@
     --background-color: white;
     --text-color: black;
     --input-bg: #f3f4f6;
-    --button-bg: black;
+    --button-bg: rgb(99, 193, 118);
     --button-text: white;
     --border-color: #ddd;
-    --active-color: blue;
+    --active-color: rgb(106, 199, 99);
     --icon-color: black; /* Icon color for light mode */
 }
 
@@ -15,10 +15,10 @@
     --background-color: #070b1d;
     --text-color: white;
     --input-bg: #101425;
-    --button-bg: #0071ff;
+    --button-bg: #81c784;
     --button-text: white;
     --border-color: #555;
-    --active-color: #0071ff;
+    --active-color: #00ff2a;
     --icon-color: white; /* Icon color for dark mode */
 }
 
